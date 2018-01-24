@@ -8,6 +8,7 @@ alias ls='ls -G'
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH="/Users/igor/bin/Sencha/Cmd:$PATH"
+export TERM="screen-256color"
 
 eval $(gdircolors ~/.dircolors/dircolors.256dark)
 eval $(ssh-agent)

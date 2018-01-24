@@ -10,6 +10,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH="/Users/igor/bin/Sencha/Cmd:$PATH"
 
 eval $(gdircolors ~/.dircolors/dircolors.256dark)
+eval $(ssh-agent)
 
 if [ -f /usr/local/bin/gls ]; then
 	alias ls="gls --color"

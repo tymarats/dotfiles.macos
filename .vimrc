@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
-:
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Esseential
 Plug 'ctrlpvim/ctrlp.vim'
@@ -18,17 +18,16 @@ Plug 'w0rp/ale' " Make sure you have eslint installed
 
 call plug#end()
 
+colorscheme palenight
+set termguicolors
+
+" Seems like there's no other way to disable bell in Windows"
+set visualbell
+
 " We don't use JSX extension
 let g:jsx_ext_required = 0
 
 set number
-let g:solarized_termcolors=256
-
-set background=dark
-colorscheme gruvbox
-
-" Seems like there's no other way to disable bell in Windows"
-set visualbell
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim
 
@@ -65,3 +64,5 @@ nmap <Leader>l :set invlist<cr>
 " prettier
 let g:prettier#config#tab_width = 4
 
+" Status line
+set laststatus=2

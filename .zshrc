@@ -1,4 +1,6 @@
-export PS1="\u@\h:\[\033[32m\]\W \[\033[33m\]\$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/\* \(.*\)/(\1)/')\[\033[00m\] $ "
+# Load version control information
+autoload -U promptinit; promptinit
+prompt pure
 
 # Add Visual Studio Code (code)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -10,7 +12,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH="/Users/igor/bin/Sencha/Cmd:$PATH"
 export TERM="screen-256color"
 
-eval $(gdircolors ~/.dircolors/dircolors.256dark)
 eval $(ssh-agent)
 
 if [ -f /usr/local/bin/gls ]; then
@@ -19,3 +20,11 @@ fi
 
 alias ll="ls -la"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias ssh="TERM=vt100 ssh"
+
+source /Users/igor/Work/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

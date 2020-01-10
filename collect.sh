@@ -1,4 +1,6 @@
-for i in .zshrc .gitignore .vim .vimrc ; do
+#!/bin/zsh
+
+for i in .zshrc .vim .vimrc ; do
 	cp -rf ~/$i . 
 done
 

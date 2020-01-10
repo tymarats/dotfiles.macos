@@ -27,4 +27,4 @@ export NVM_DIR="$HOME/.nvm"
 
 alias ssh="TERM=vt100 ssh"
 
-source /Users/igor/Work/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

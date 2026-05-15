@@ -14,10 +14,6 @@ export TERM="screen-256color"
 
 eval $(ssh-agent)
 
-if [ -f /usr/local/bin/gls ]; then
-	alias ls="gls --color"
-fi
-
 alias ll="ls -la"
 
 

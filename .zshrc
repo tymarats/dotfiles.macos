@@ -28,3 +28,6 @@ export NVM_DIR="$HOME/.nvm"
 alias ssh="TERM=vt100 ssh"
 
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"

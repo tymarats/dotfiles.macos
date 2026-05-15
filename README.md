@@ -2,7 +2,7 @@
 
 This is a collection of minimalistic dotfiles for macOS.
 
-In bash:
+In zsh:
 ```
 ./install.sh
 brew install coreutils

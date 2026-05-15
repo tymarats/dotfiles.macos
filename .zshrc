@@ -1,4 +1,5 @@
 # Load version control information
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -9,7 +10,6 @@ alias ls='ls -G'
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export PATH="/Users/igor/bin/Sencha/Cmd:$PATH"
 export TERM="screen-256color"
 
 eval $(ssh-agent)

@@ -66,3 +66,9 @@ let g:prettier#config#tab_width = 4
 
 " Status line
 set laststatus=2
+
+" Tabs (w/o prettier)
+set shiftwidth=4
+set tabstop=4
+set expandtab
+

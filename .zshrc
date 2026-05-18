@@ -1,6 +1,7 @@
 # Load version control information
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
+zstyle :prompt:pure:prompt:success color 141
 prompt pure
 
 # Add Visual Studio Code (code)

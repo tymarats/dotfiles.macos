@@ -1,0 +1,16 @@
+#!/bin/zsh
+# Run by sleepwatcher right before the Mac sleeps.
+# Stops Docker Desktop if the lid is closed and we're on battery.
+
+log=~/Library/Logs/sleep-docker.log
+
+lid_closed=$(ioreg -r -k AppleClamshellState -d 4 | grep -q '"AppleClamshellState" = Yes' && echo 1)
+on_battery=$(pmset -g batt | grep -q "'Battery Power'" && echo 1)
+
+if [[ -n $lid_closed && -n $on_battery ]]; then
+  if pgrep -x "com.docker.backend" >/dev/null; then
+    echo "$(date '+%F %T') lid closed on battery, stopping Docker Desktop" >> $log
+    /usr/local/bin/docker desktop stop --timeout 20 >> $log 2>&1 \
+      || osascript -e 'quit app "Docker"' >> $log 2>&1
+  fi
+fi
